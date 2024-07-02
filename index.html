@@ -1,37 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="website-icon" href="Assets/logo.png">
 <head>
-   <title>Portfolio</title>
+    <link rel="website-icon" href="Assets/logo.png">
+    <title>Portfolio</title>
+    <style>
+        .skill-card{
+            height: 20vw;
+            width: 20vw;
+            background-color: red;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5vh;
+            transition: all ease 0.5s;
+            color: white;
+        }
+        .skill-card:hover{
+            background-color: white;
+            color: black;
+        }
+        .portfolio-cards{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-top: 50px;
+            gap: 2.5vh;
+            margin-left: 100px;
+        }
+        .portfolio-card{
+            position: relative;
+            height: 30vw;
+            width: 30vw;
+            background-color: red;
+            border-radius: 20px;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5vh;
+            transition: all ease 0.5s;
+        }
+        .portfolio-card img{
+            position: relative;
+            height: 30vw;
+            width: 30vw;
+            object-fit: cover;
+        }
+        .portfolio-card .overlay{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vh;
+            height: 30vw;
+            width: 30vw;
+            background-color: #34353ba2;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            transition: all ease 0.5s;
+        }
+        .portfolio-card .overlay h3{
+            color: white;
+            font-size: 24px;
+        }
+        .portfolio-card .overlay p{
+            color: white;
+            font-size: 16px;
+            text-align: center;
+        }
+        .portfolio-card .overlay button{
+            height: 36px;
+            width: 108px;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 8px;
+            color: white;
+            font-size: 12px;
+            transition: all ease 0.5s;
+            cursor: pointer;
+        }
+        .portfolio-card .overlay:hover{
+            opacity: 1;
+        }
+        .portfolio-card .overlay button:hover{
+            background-color: white;
+            color: black;
+        }
+        .button1 a:hover{
+            background-color: white;
+            color: black;
+            border: 0px;
+            border-radius: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .button2 a:hover{
+            background-color: white;
+            color: black;
+            font-size: 18px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <section style="background-image: url(Assets/banner.png); background-size: cover; background-attachment: fixed; background-repeat: no-repeat;">
-            <div>
-                <div>
-                <img src="Assets/logo.png">
+    <section style="justify-content: center;">
+    <section style="background-image: url(Assets/banner.png); background-position: center; background-size: cover; background-attachment: fixed; height: 500px; width: 1450px;">
+        <div style="display: inline-flex;">
+            <img src="Assets/logo.png" height="100px" width="100px">
+            <ul type="none" style="display: inline-flex;">
+                <li style="margin-left: 400px; color: white;">
+                    <a>
+                        About 
+                    </a>
+                </li>
+                <li style="margin-left: 50px; color: white;">
+                    <a>
+                        Portfolio
+                    </a>
+                </li>
+                <li style="margin-left: 50px; color: white;">
+                    <a>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="margin-left: 300px; margin-top: 80px;">
+            <h style="color: white; font-size: 30px; ">
+                I'M
+            </h>
+            <h style="color: red; font-size: 40px; font-weight: bold;">
+                Web Dev
+            </h>
+            <p style="color: white; font-size: 30px;">
+                Python Developer &Web <br>
+                Developer Consultant
+            </p>
+            <button style="color: red; background-color: rgba(238, 130, 238, 0); border-color: red; border: 2px; border-radius: 10px; border-style: solid; padding-top: 5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px;">
+                <a>
+                    Contact Me
+                </a>
+            </button>
+        </div>
+    </section>
+    <section style="background-color: black; color: white; width: 1350px; padding-bottom: 25px;" >
+        <h style="font-size: 30px; font-weight: bold; margin-left: 50px; text-decoration: underline; text-decoration-color: red;">
+            ABOUT
+        </h>
+        <p style="color: white; font-size: 25px; margin-left: 50px; justify-content: center; ">
+            Hello! I'm Ayush Yadav, a passionate and dedicated web developer with a knack for creating dynamic, user-friendly websites and applications. With a strong foundation in HTML, CSS, JavaScript, and various modern frameworks, I bring a blend of technical expertise and creative problem-solving to every project I undertake.
+        </p>
+    </section>
+    <section style="background-color: black; color: white; margin-top:-25px;">
+        <h style="margin-left: 50px; font-size: 35px;">
+            My Skills
+        </h>
+        <div>
+            <div style="display: flex; align-items: center; width: 100%; flex-wrap: wrap; justify-content: center; gap: 2.5vh;">
+                <div class="skill-card">
+                    <img src="Assets/python.svg">
+                    <h2>
+                        Python 
+                    </h2>
                 </div>
-                <div>
-                    <ul type="none">
-                        <li>
-                            <a>
-                            About
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                            Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                            Contact
-                            </a>
-                        </li>
-                    </ul>
+                <div class="skill-card">
+                    <img src="Assets/git.svg">
+                    <h2>
+                        GIT 
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/flutter.svg">
+                    <h2>
+                        Flutter
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/flask.svg">
+                    <h2>
+                        Flask 
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/django.svg">
+                    <h2>
+                        Django 
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/html.svg">
+                    <h2>
+                        HTML 
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/css.svg">
+                    <h2>
+                        CSS
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/js.svg">
+                    <h2>
+                        JavaScript 
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/amazon-web-services.svg">
+                    <h2>
+                        AWS
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/linux-96.png">
+                    <h2>
+                        Linux 
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/mongodb.svg">
+                    <h2>
+                        MONGO DB 
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/mysql.svg">
+                    <h2>
+                        MySql 
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/nodejs.svg">
+                    <h2>
+                        NODE JS
+                    </h2>
+                </div>
+                <div class="skill-card">
+                    <img src="Assets/react.svg">
+                    <h2>
+                        REACT JS 
+                    </h2>
                 </div>
             </div>
-        </section>
+        </div>
     </section>
+    <section style="background-color: black; color: white; padding-bottom: 50px;">
+        <h style="margin-left: 50px; font-size: 30px;">
+            PORTFOLIO
+        </h>
+        <div class="portfolio-cards">
+            <div class="portfolio-card">
+                <img src="Assets/portfolio1.png">
+                <div class="overlay">
+                    <h3>
+                        ARROH EDUCATION
+                    </h3>
+                    <p>
+                        It is an Coaching institute Website
+                    </p>
+                    <button>
+                        See More->
+                    </button>
+                </div>
+            </div>
+            <div class="portfolio-card" style="margin-left: 150px;">
+                <img src="Assets/portfolio2.png">
+                <div class="overlay">
+                    <h3>
+                        DLAW Institute 
+                    </h3>
+                    <p>
+                        It is an Law institute Website
+                    </p>
+                    <button>
+                        See More->
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="portfolio-card">
+                <img src="Assets/portfolio3.png">
+                <div class="overlay">
+                    <h3>
+                        ADWIK SOLUTIONS
+                    </h3>
+                    <p>
+                        Is is an Consultant Company's Website 
+                    </p>
+                    <button>
+                        See More->
+                    </button>
+                </div>
+            </div>
+            <div class="portfolio-card" style="margin-left: 150px;">
+                <img src="Assets/portfolio4.png">
+                <div class="overlay">
+                    <h3>
+                        DOUBLE A
+                    </h3>
+                    <p>
+                        It is my own website
+                    </p>
+                    <button>
+                        See More->
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="button2" style="background-color: red; color: white;font-size: 18px;margin-left: 600px;padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px; border: 0px; border-radius: 10px;">
+            <a>
+                View More
+            </a>
+        </button>
+    </section>
+<section style="background-color: black; color: white; font-size: 85px; font-weight: bold; margin-top: -100px;">
+    <div>
+        <h1 style="padding-top: 10px; margin-left: 450px;">
+            Contact Me
+        </h1>
+    </div>
+    <div style="padding-left: 480px; margin-top: -80px; padding-bottom: 20px;">
+        <button class="button1" style="background-color: red; color: white; padding-left: 10px; padding-right: 10px; padding-top: 15px; padding-bottom: 15px; border-radius: 15px; border: 0px;">
+            <a>
+                Ayush Yadav
+            </a>
+        </button>
+        
+        <button class="button1" style="background-color: red; color: white; padding-left: 10px; padding-right: 10px; padding-top: 15px; padding-bottom: 15px; border-radius: 15px; border: 0px;">
+            <a>
+                9829881648
+            </a>
+        </button>
+        
+        <button class="button1" style="background-color: red; color: white; padding-left: 10px; padding-right: 10px; padding-top: 15px; padding-bottom: 15px; border-radius: 15px; border: 0px;">
+            <a>
+                Rajasthan, India
+            </a>
+        </button>
+    </div>
+</section>    
+</section>
 </body>
 </html>
